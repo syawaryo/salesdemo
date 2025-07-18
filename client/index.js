@@ -1,8 +1,9 @@
-import routes from "/:routes.js";
-import create from "/:create.jsx";
+import routes from "./routes.js";
+import create from "./create.jsx";
 
 export default {
-  context: import("/:context.js"),
+  // 元のコードに近い形（即時 dynamic import → Promise）
+  context: import("./context.js"),
   routes,
   create,
 };
